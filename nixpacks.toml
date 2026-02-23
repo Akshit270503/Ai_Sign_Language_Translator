@@ -1,0 +1,21 @@
+[phases.setup]
+nixPkgs = ["python311", "libxcb", "libGL"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "python app.py"
+```
+
+**File 2 — `runtime.txt`** (backup Python version hint)
+```
+python-3.11.9
+```
+
+**File 3 — `requirements.txt`** (replace everything with this)
+```
+flask>=2.3.0
+opencv-python-headless==4.8.0.74
+mediapipe==0.10.30
+numpy==1.24.4
